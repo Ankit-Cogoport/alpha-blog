@@ -205,7 +205,6 @@ DEPENDENCIES
   capybara (>= 2.15)
   jbuilder (~> 2.7)
   listen (~> 3.2)
-  pg
   puma (~> 4.1)
   rails (~> 6.0.6)
   sass-rails (>= 6)
