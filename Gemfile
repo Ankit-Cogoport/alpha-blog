@@ -24,8 +24,9 @@ gem 'jbuilder', '~> 2.7'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
-group :development,:test do
+group :development, :test do
   gem 'activerecord-jdbcsqlite3-adapter'
+  gem 'byebug',platforms:[:mri,:mingw,:x64_mingw]
 end
 group :development do
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
