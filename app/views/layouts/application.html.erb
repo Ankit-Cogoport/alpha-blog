@@ -6,17 +6,26 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag "/javascript/packs/application.js", "data-turbo-track": "reload", defer: true %>
-    <%
+  
+    <%= javascript_include_tag "/javascript/packs/application.js", "data-turbo-track": "reload", defer: true %> 
+
+<%
 =begin%>
- <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>  
+    
+     <%= javascript_pack_tag '/javascript/packs/application', 'data-turbolinks-track': 'reload' %>   
 <%
 =end%>
+
 
   </head>
 
   <body>
-    <%= render 'layouts/messages' %>
-    <%= yield %>
+    <%= render 'layouts/navigation' %>
+    <div id="page-content">
+      <%= render 'layouts/messages' %>
+      <%= yield %>
+    </div>
+    <%= render 'layouts/footer' %> 
+
   </body>
 </html>
