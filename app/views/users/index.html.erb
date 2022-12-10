@@ -16,7 +16,14 @@
         <p class="card-text"><%= pluralize(user.articles.count,"article") %></p>
             <div style="float: center-left; width: auto;">
             <%= link_to "View Profile",user_path(user),class:"btn btn-outline-success " %>
+            <% if logged_in? %>
+            <% if user==current_user %>
             <%= link_to "Edit Profile",edit_user_path(user),class:"btn btn-outline-info " %>
+            <%end %>
+            <% if current_user.admin? %>
+            <%= button_to "Delete Profile",user_path(user),method: :delete,class:"btn btn-outline-info " %>
+            <%end %>
+            <% end %>
             </div>
     </div>
 
