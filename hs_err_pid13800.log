@@ -1,0 +1,4 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  SIGBUS (0xa) at pc=0x0000000112cc80da, pid=13800

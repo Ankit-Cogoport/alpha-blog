@@ -1,0 +1,34 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  SIGBUS (0xa) at pc=0x000000010edee1db, pid=13547, tid=39427
+#
+# JRE version: OpenJDK Runtime Environment AdoptOpenJDK-16.0.1+9 (16.0.1+9) (build 16.0.1+9)
+# Java VM: OpenJDK 64-Bit Server VM AdoptOpenJDK-16.0.1+9 (16.0.1+9, mixed mode, sharing, tiered, compressed oops, compressed class ptrs, g1 gc, bsd-amd64)
+# Problematic frame:
+# V  [libjvm.dylib+0x4c81db]  _ZN8CodeHeap15search_freelistEm+0x1ab
+#
+# No core dump will be written. Core dumps have been disabled. To enable core dumping, try "ulimit -c unlimited" before starting Java again
+#
+# If you would like to submit a bug report, please visit:
+#   https://github.com/AdoptOpenJDK/openjdk-support/issues
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: --add-opens=java.base/java.io=org.jruby.dist --add-opens=java.base/java.nio.channels=org.jruby.dist --add-opens=java.base/sun.nio.ch=org.jruby.dist --add-opens=java.management/sun.management=org.jruby.dist -Xss2048k -Djffi.boot.library.path=/Users/user/.rvm/rubies/jruby-9.3.3.0/lib/jni -Djava.security.egd=file:/dev/urandom --module-path=/Users/user/.rvm/rubies/jruby-9.3.3.0/lib/jruby.jar -Djruby.home=/Users/user/.rvm/rubies/jruby-9.3.3.0 -Djruby.lib=/Users/user/.rvm/rubies/jruby-9.3.3.0/lib -Djruby.script=jruby -Djruby.shell=/bin/sh org.jruby.Main /Users/user/.rvm/gems/jruby-9.3.3.0/bin/rails test
+
+Host: MacBookAir10,1 x86_64 2400 MHz, 8 cores, 8G, Darwin 21.6.0, macOS 10.16 (21G115)
+Time: Sat Dec 10 16:50:33 2022 IST elapsed time: 9.804663 seconds (0d 0h 0m 9s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x00007fd328030200):  JavaThread "C1 CompilerThread0" daemon [_thread_in_vm, id=39427, stack(0x00000003073e3000,0x00000003074e3000)]
+
+
+Current CompileTask:
+C1:   9804 8004       3       java.nio.CharBuffer::<init> (14 bytes)
+
+Stack: [0x00000003073e3000,0x00000003074e3000],  sp=0x00000003074e2430,  free space=1021k
+Native frames: (J=compiled Java code, A=aot compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [libjvm.dylib+0x4c81db]  _ZN8CodeHeap15search_freelistEm+0x1ab
